@@ -1,0 +1,40 @@
+.represent {
+	background-image: url(../../images/backgrounds/represent-bg.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	&__inner {
+		height: 90vh;
+		position: relative;
+	}
+
+	&__text-box {
+		position: absolute;
+		bottom: 30px;
+		color: #fff;
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 28.5px;
+	}
+	&__link {
+		margin-top: 2px;
+		font-size: 15px;
+		line-height: 22.5px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 115%;
+			height: 1px;
+			bottom: -3.5px;
+			left: 0;
+			background-color: #fff;
+
+		}
+	}
+}
+.container {
+}

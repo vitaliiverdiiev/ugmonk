@@ -5,6 +5,7 @@ $burger-color: #1b262c;
 // - - -  B U R G E R - - - - - - - - - //
 
 .burger {
+	display: none;
 	position: relative;
 	width: $burger-size;
 	height: $burger-size;

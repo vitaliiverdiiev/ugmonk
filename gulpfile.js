@@ -80,7 +80,13 @@ const img = () =>
 // ********** J A V A S C R I P T ********** //
 
 // const jsFiles = ['./src/js/index.js', './src/js/burger.js', './src/js/animation.js'];
-const jsFiles = ['./src/javascript/index.js', './src/javascript/burger.js', './src/javascript/animation.js'];
+const jsFiles = [
+	'./src/javascript/index.js', 
+	'./src/javascript/burger.js', 
+	'./src/javascript/animation.js',
+	'./src/javascript/products.js'
+];
+
 const js = () =>
 	gulp
 		.src(jsFiles)
