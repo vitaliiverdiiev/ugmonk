@@ -1,0 +1,17 @@
+// --- --- --- LIBS --- --- --- //
+@import "./libs/_reset.scss";
+@import "./libs/_variables.scss";
+@import "./libs/_default.scss";
+@import "./libs/_animation.scss";
+
+// --- --- --- COMPONENTS --- --- --- //
+// @import "./components/nav";
+// @import "./components/burger";
+
+// --- --- --- SECTIONS --- --- --- //
+@import "./sections/header";
+
+// @import "./sections/footer.scss";
+
+// --- --- --- PAGES --- --- --- //
+@import "./pages/thanks";

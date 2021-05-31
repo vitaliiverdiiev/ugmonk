@@ -1,0 +1,58 @@
+.ac {
+	overflow-x: hidden;
+}
+
+@mixin slide($tth, $ttv, $o, $ts, $td) {
+	transform: translate($tth + px, $ttv + px);
+	opacity: $o;
+	transition: all $ts + s ease $td + s;
+
+	&._active {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+@mixin popup($s) {
+	transform: scale($s);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+
+	&._active {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+[data-ai="tb"],
+[data-ai-nr="tb"] {
+	@include slide(0, -120, 0, 0.8, 0);
+}
+[data-ai="rl"],
+[data-ai-nr="rl"] {
+	@include slide(120, 0, 0, 0.8, 0);
+}
+[data-ai="bt"],
+[data-ai-nr="bt"] {
+	@include slide(0, 120, 0, 0.8, 0);
+}
+[data-ai="lr"],
+[data-ai-nr="lr"] {
+	@include slide(-120, 0, 0, 0.8, 0);
+}
+[data-ai="s"],
+[data-ai-nr="s"] {
+	@include popup((0));
+}
+
+[data-test],
+.partnemrs__items {
+	transform: scale(0);
+	opacity: 0;
+	// transition: all 0.8s ease 0s;
+
+	&._active {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
