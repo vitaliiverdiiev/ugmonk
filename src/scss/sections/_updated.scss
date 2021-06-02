@@ -1,0 +1,49 @@
+.updated {
+	min-height: 445px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #CED3CA;
+	text-align: center;
+
+	&__title {
+		font-size: 34px;
+		line-height: 41px;
+		margin-bottom: 20px;
+	}
+
+	&__description {
+		max-width: 375px;
+		font-size: 16px;
+		line-height: 22.5px;
+		margin-bottom: 56px;
+	}
+}
+.form {
+	display: flex;
+	&__item {
+	}
+
+	&__input {
+		width: 338px;
+		height: 48px;
+		padding: 12px 18px;
+		margin: 0;
+		border: 1px solid #242424;
+		outline: none;
+	}
+
+	&__btn {
+		margin: 0;
+		width: 66px;
+		height: 48px;
+		background-color: #fff;
+		background-image: url(../../images/arrow-right.svg);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		border: 1px solid #242424;
+		border-left: none;
+		cursor: pointer;
+	}
+}

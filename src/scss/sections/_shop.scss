@@ -1,0 +1,64 @@
+.shop {
+	padding: 115px 0;
+	background-color: #f8f6f2;
+
+	&__title {
+		max-width: 630px;
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+		margin: 0 auto 92px;
+	}
+
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 115px;
+		grid-row-gap: 70px;
+	}
+
+	&__item {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__item--mens {
+		grid-area: 1 / 1 / 2 / 2;
+		background-position: 0 50%;
+		background-image: url(../../images/shop-mens.jpg);
+	}
+
+	&__item--womens {
+		grid-area: 1 / 2 / 2 / 3;
+		background-image: url(../../images/shop-womens.jpg);
+	}
+
+	&__item--objects {
+		grid-area: 2 / 1 / 3 / 3;
+		background-image: url(../../images/shop-objects.jpg);
+	}
+
+	&__item-image-box {
+		min-height: 647px;
+		height: 647px;
+		max-height: 647px;
+	}
+
+	&__item-text-box {
+		background-color: #f8f6f2;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 7px;
+		&::after {
+			background-color: #1a1a1a;
+		}
+	}
+}
+.container {
+}
+.link {
+}

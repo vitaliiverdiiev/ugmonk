@@ -24,6 +24,15 @@
 	}
 }
 
+@mixin opacity() {
+	opacity: 0;
+	transition: all 1.25s ease 0s;
+
+	&._active {
+		opacity: 1;
+	}
+}
+
 [data-ai="tb"],
 [data-ai-nr="tb"] {
 	@include slide(0, -120, 0, 0.8, 0);
@@ -43,6 +52,10 @@
 [data-ai="s"],
 [data-ai-nr="s"] {
 	@include popup((0));
+}
+[data-ai="opacity"],
+[data-ai-nr="opacity"] {
+	@include opacity();
 }
 
 [data-test],

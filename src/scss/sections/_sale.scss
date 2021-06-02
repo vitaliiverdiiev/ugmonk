@@ -1,0 +1,28 @@
+.sale {
+	background-color: #CED3CA;
+	padding: 127px 140px;
+	&__inner {
+		height: 406px;
+		background-color: #F7F7F7;
+		background-image: url(../../images/sale.jpg);
+		background-repeat: no-repeat;
+		background-position: 100% 0;
+		padding: 90px;
+	}
+
+	&__title {
+		max-width: 208px;
+		font-size: 38px;
+		line-height: 46px;
+		background-color: #F7F7F7;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 33px;
+
+		&::after {
+			background-color: #1a1a1a;
+		}
+	}
+}
