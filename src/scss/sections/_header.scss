@@ -13,6 +13,7 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	max-width: 100%;
 	& .inner-nav {
 		display: flex;
 	}
@@ -33,6 +34,8 @@
 			color: #fff;
 		}
 	}
+
+
 }
 .logo {
 	width: 265px;
@@ -71,4 +74,48 @@
 }
 .burger {
 	display: none;
+}
+
+@media screen and (max-width: 992px) {
+	.nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 75vw;
+		background-color: #fff;
+		flex-direction: column;
+		justify-content: center;
+		transform: translateX(-120%);
+		transition: transform 0.8s ease 0s;
+		
+		&--active {
+			transform: translateX(0);
+			z-index: 999;
+		}
+
+
+		&__items {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1.5rem;
+		}
+
+		&__item {
+			padding: 1rem 2rem;
+			font-size: 1.2rem;
+		}
+
+		&__link	{
+
+			display: block;
+			// max-width: 100%;
+		}
+	}
+	.burger {
+		display: block;
+	}
+	.inner-nav {
+		flex-direction: column;
+	}
 }

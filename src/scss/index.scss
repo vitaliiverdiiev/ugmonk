@@ -6,7 +6,7 @@
 
 // --- --- --- COMPONENTS --- --- --- //
 // @import "./components/nav";
-// @import "./components/burger";
+@import "./components/burger";
 
 // --- --- --- SECTIONS --- --- --- //
 @import "./sections/header";
@@ -23,3 +23,7 @@
 
 // --- --- --- PAGES --- --- --- //
 @import "./pages/thanks";
+
+
+// --- --- --- MEDIA QUERIES --- --- --- //
+@import "./sections/header_media-queries"

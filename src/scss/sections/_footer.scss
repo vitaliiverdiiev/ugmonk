@@ -5,17 +5,30 @@
 	padding-bottom: 90px;
 
 	&__info-box {
-		display: flex;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: repeat(auto-fit);
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+		height: 100%;
 	}
 
 	&__rights-box {
+		text-align: right;
+		width: fit-content;
 		grid-area: 1 / 1 / 2 / 2
 	}
 
 	&__rights {
+		font-size: 15px;
+		line-height: 21px;
 	}
 
 	&__permission {
+		max-width: 233px;
+		font-size: 15px;
+		line-height: 21px;
+		margin-top: 9px;
 	}
 
 	&__logo-box {
@@ -28,14 +41,11 @@
 	}
 }
 .footer-nav {
-	display: grid;
-	grid-template-columns: 1.5fr .5fr;
-	grid-template-rows: 1.5fr .5fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
-	}
+	
+	display: flex;
 
 	&__items {
+		
 		& + & {
 			margin-left: 160px;
 		}
@@ -53,22 +63,87 @@
 .social {
 
 	&__items {
+		display: flex;
+		justify-content: flex-end;
 		grid-area: 2 / 1 / 3 / 3;
 	}
 
 	&__item {
 		display: inline-block;
-		width: 50px;
-		height: 50px;
-		background-color: #323232;
+		width: 30px;
+		height: 30px;
+		// background-color: #323232;
+		background-image: url(../../images/sprite-icons.svg);
+		background-size: cover;
 		& + & {
 			margin-left: 10px;
 		}
 	}
 }
 .instagram {
+	background-position: -215px 0;
 }
 .twitter {
+	background-position: -295px 0;
 }
 .facebook {
+	background-position: -135px 0;
+}
+
+@media screen and (max-width: 768px) {
+	.footer {
+		align-items: center;
+		flex-direction: column;
+	
+		&__info-box {
+			margin-top: 3rem;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.footer-nav {
+	
+		&__items {
+			&:last-of-type {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.footer {
+		padding-left: 2rem;
+		padding-right: 2rem;
+		align-items: flex-start;
+		&-nav {
+			flex-direction: column;
+			
+			&__items {
+				&:last-of-type {
+					margin-top: 1rem;
+					margin-left: 0;
+				}
+			}
+		}
+
+		&__info-box {
+
+		}
+
+		&__rights-box {
+			grid-area: 1 / 1 / 2 / 3;
+			text-align: left;
+		}
+
+		&__logo-box {
+			grid-area: 2 / 1 / 3 / 2;
+		}
+
+		.social__items {
+			grid-area: 2 / 2 / 3 / 3; 
+			align-items: flex-end;
+		}
+	}
 }

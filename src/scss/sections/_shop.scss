@@ -58,7 +58,31 @@
 		}
 	}
 }
-.container {
-}
-.link {
+
+@media screen and (max-width: 576px) {
+	.shop {
+
+		&__title {
+			font-size: 24px;
+			padding: 0 2rem;
+		}
+
+		&__inner {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto;
+		}
+
+		&__item--mens {
+			grid-area: auto;
+			}
+	
+		&__item--womens {
+			grid-area: auto;
+		}
+	
+		&__item--objects {
+			grid-area: auto;
+		}
+	
+	}
 }
